@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package factorialService;
+
+service FactorialService{
+    rpc Factorial (FactRequest) returns (FactResponse);
+}
+message FactRequest{
+    int64 num = 1;
+}
+message FactResponse {
+    int64 result = 1;
+}
